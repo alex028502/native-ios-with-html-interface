@@ -1,0 +1,16 @@
+index.html
+bower_components/angular/angular.js
+bower_components/angular-resource/angular-resource.js
+bower_components/angular-mocks/angular-mocks.js
+interface.js
+bower_components/jasmine-core/lib/jasmine-core/jasmine.css
+bower_components/jasmine-core/lib/jasmine-core/jasmine.js
+bower_components/jasmine-core/lib/jasmine-core/jasmine-html.js
+bower_components/jasmine-core/lib/jasmine-core/boot.js
+test/api-test.js
+test/api-test.html
+test/unit-test.js
+test/unit-test.html
+bower_components/jquery/dist/jquery.js
+test/signal-when-finished.js
+files.txt

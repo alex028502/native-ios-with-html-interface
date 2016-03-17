@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="DemoApp">
+<head>
+  <title>Embedded Angular</title>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="angular-resource.js"></script>
+  <script type="text/javascript" src="interface.js"></script>
+</head>
+<body ng-controller="DemoController">
+
+Write some text in textbox:
+<form ng-submit="addNote()">
+  <input type="text" ng-model="new_note" />
+  <input id="save-button" type="submit" value="save" />
+</form>
+
+<div id="preview">{{ new_note }}</div>
+<div ng-repeat="note in notes | reverse | limitTo:3">{{ note.note }}</div>
+<button ng-if="notes.length > 3" ng-click="seeAll()">see all</button>
+<br /><br /><br /><br /><br /><br /><br />
+<small>here is a <a href="http://github.com">test link</a> to an external site</small>
+</body>
+</html>

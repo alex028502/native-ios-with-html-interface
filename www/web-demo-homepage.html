@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>web demo index</title>
+  <script>
+    function deleteExistingNotes() {
+      $.ajax({
+        url: "/delete-all",
+        type: "delete",
+        success: function (data) {
+          alert(data);
+        },
+        error: function (a, b, c) {
+          //this just prints out all the arguments to the fail so that we can
+          //see what went wrong
+          console.log(a);
+          console.log(b);
+          console.log(c);
+          alert("failed to delete - see log for details");
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <script type="text/javascript" src="jquery.js"></script>
+  <a href='/index.html'>interface</a><br />
+  <a href='/api-test'>api test</a><br />
+  <a href='/unit-test.html'>unit test</a><br />
+  <a href="javascript:deleteExistingNotes();">delete existing notes</a>
+</body>
+</html>
