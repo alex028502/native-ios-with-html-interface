@@ -130,6 +130,8 @@ class demoUITests: XCTestCase {
         
         saveButton.tap()
         
+        sleep(5)
+        
         XCTAssertTrue(entry1.exists, "appears still there now that it is saved");
         XCTAssertFalse(entry2.exists);
         XCTAssertFalse(entry3.exists);
@@ -140,6 +142,8 @@ class demoUITests: XCTestCase {
         textField.typeText("2222") //use numerals so that auto correct doesn't mess us up
         saveButton.tap()
         
+        sleep(5)
+        
         XCTAssertTrue(entry1.exists);
         XCTAssertTrue(entry2.exists);
         XCTAssertFalse(entry3.exists);
@@ -149,6 +153,8 @@ class demoUITests: XCTestCase {
         textField.tap()
         textField.typeText("3333") //use numerals so that auto correct doesn't mess us up
         saveButton.tap()
+
+        sleep(5)
         
         XCTAssertTrue(entry1.exists);
         XCTAssertTrue(entry2.exists);
